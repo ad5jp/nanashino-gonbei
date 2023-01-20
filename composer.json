@@ -1,0 +1,23 @@
+{
+    "name": "ad5jp/nanashino-gonbei",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AD5jp\\NanashinoGonbei\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ad5jp"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.11.1",
+        "phpunit/phpunit": "^7.5"
+    }
+}
