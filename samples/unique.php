@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use AD5jp\NanashinoGonbei\Nanashi;
-
 include(__DIR__ . '/../vendor/autoload.php');
+
+use AD5jp\NanashinoGonbei\Nanashi;
 
 // ユニークモード
 $nanashi = new Nanashi();

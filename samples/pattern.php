@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
+include(__DIR__ . '/../vendor/autoload.php');
+
 use AD5jp\NanashinoGonbei\Enums\Generation;
 use AD5jp\NanashinoGonbei\Enums\Sex;
 use AD5jp\NanashinoGonbei\Nanashi;
-
-include(__DIR__ . '/../vendor/autoload.php');
 
 // 男性の名前だけ生成
 $nanashi = new Nanashi();
