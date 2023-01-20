@@ -7,5 +7,5 @@ namespace AD5jp\NanashinoGonbei\Enums;
 class Generation
 {
     const SHOWA = 1;
-    const MODERN = 2;
+    const KIRAKIRA = 2;
 }

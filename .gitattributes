@@ -4,5 +4,6 @@
 /.gitignore         export-ignore
 /phpstan.neon       export-ignore
 /phpunit.xml        export-ignore
+/samples            export-ignore
 /tests              export-ignore
 /README.md          export-ignore

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace AD5jp\NanashinoGonbei\Entities;
 
-class WhatsHerName
+class Gonbei
 {
     private string $firstName;
     private string $firstNameKana;

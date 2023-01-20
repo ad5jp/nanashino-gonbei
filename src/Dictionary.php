@@ -26,6 +26,7 @@ class Dictionary
         ['次郎', 'じろう', Sex::MALE, Generation::SHOWA],
         ['花子', 'はなこ', Sex::FEMALE, Generation::SHOWA],
         ['夏美', 'なつみ', Sex::FEMALE, Generation::SHOWA],
+        ['奏', 'かなで', Sex::FEMALE, Generation::KIRAKIRA],
     ];
 
 }
