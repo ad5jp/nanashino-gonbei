@@ -130,6 +130,23 @@ class Nanashi
     }
 
     /**
+     * @param positive-int $number
+     * @return Gonbei[]
+     */
+    public function group(int $number) : array
+    {
+        $group = [];
+
+        for ($i = 0; $i < $number; $i++) {
+            $group[] = $this->born();
+        }
+
+        usort($group, fn ($a, $b) => $a->fullNameKana() <=> $b->fullNameKana());
+
+        return $group;
+    }
+
+    /**
      * @param array{0:string, 1:string, 2:\AD5jp\NanashinoGonbei\Enums\Sex::*, 3:\AD5jp\NanashinoGonbei\Enums\Generation::*} $first_name_array
      * @return boolean
      */

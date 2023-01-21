@@ -109,4 +109,25 @@ class NanashiTest extends TestCase
             $this->assertEquals($generation, $gonbei->generation());
         }
     }
+
+    public function testGroup()
+    {
+        $number = 20;
+
+        $nanashi = new Nanashi();
+        $gonbeis = $nanashi->group($number);
+
+        $this->assertEquals($number, count($gonbeis));
+
+        $beforeFullNameKana = null;
+        foreach ($gonbeis as $gonbei) {
+            $this->assertInstanceOf(Gonbei::class, $gonbei);
+
+            if ($beforeFullNameKana !== null) {
+                $this->assertGreaterThanOrEqual($beforeFullNameKana, $gonbei->fullNameKana());
+            }
+
+            $beforeFullNameKana = $gonbei->fullNameKana();
+        }
+    }
 }

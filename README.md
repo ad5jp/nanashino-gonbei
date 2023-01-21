@@ -136,3 +136,21 @@ for ($i = 0; $i < 10; $i++) {
     echo $nanashi->fullName() . "\n";
 }
 ```
+
+## 一括生成（50音順ソート）
+
+```php
+use AD5jp\NanashinoGonbei\Nanashi;
+
+// 一括生成
+$nanashi = new Nanashi();
+$nanashi->unique();
+
+$gonbeis = $nanashi->group(30);
+
+foreach ($gonbeis as $gonbei) {
+    echo $gonbei->fullName() . " : " . $gonbei->fullNameKana() . "\n"; // 50音順にソートされている
+}
+```
+
+フルネーム（よみがな）でソート済の Gonbei オブジェクトの配列を返します。
