@@ -14,6 +14,9 @@ class Dictionary
     const INDEX_SEX = 2;
     const INDEX_GENERATION = 3;
 
+    /**
+     * @var array<int, array{0:string, 1:string}>
+     */
     const LAST_NAMES = [
         ["佐藤","さとう"],
         ["鈴木","すずき"],
@@ -1017,6 +1020,9 @@ class Dictionary
         ["杉崎","すぎさき"],
     ];
 
+    /**
+     * @var array<int, array{0:string, 1:string, 2:\AD5jp\NanashinoGonbei\Enums\Sex::*, 3:\AD5jp\NanashinoGonbei\Enums\Generation::*}>
+     */
     const FIRST_NAMES = [
         ["碧", "あお", Sex::MALE, Generation::KIRAKIRA],
         ["陽翔", "はると", Sex::MALE, Generation::KIRAKIRA],

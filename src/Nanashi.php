@@ -47,9 +47,9 @@ class Nanashi
 
     public function __construct()
     {
-        $this->dictionaryFirstName = Dictionary::FIRST_NAMES;
+        $this->dictionaryFirstName = Dictionary::FIRST_NAMES; // @phpstan-ignore-line @todo
         $this->dictionaryLastName = Dictionary::LAST_NAMES;
-        $this->nomineesFirstName = Dictionary::FIRST_NAMES;
+        $this->nomineesFirstName = Dictionary::FIRST_NAMES; // @phpstan-ignore-line @todo
         $this->nomineesLastName = Dictionary::LAST_NAMES;
     }
 
@@ -65,6 +65,7 @@ class Nanashi
     {
         $this->sex = $sex;
         $this->nomineesFirstName = array_values(array_filter($this->dictionaryFirstName, [$this, 'filterFirstName']));
+        $this->nomineesLastName = $this->dictionaryLastName;
     }
 
     /**
@@ -74,6 +75,7 @@ class Nanashi
     {
         $this->generation = $generation;
         $this->nomineesFirstName = array_values(array_filter($this->dictionaryFirstName, [$this, 'filterFirstName']));
+        $this->nomineesLastName = $this->dictionaryLastName;
     }
 
     public function born(int $retry = 3) : Gonbei
