@@ -6,7 +6,7 @@ include(__DIR__ . '/../vendor/autoload.php');
 
 use AD5jp\NanashinoGonbei\Nanashi;
 
-// 漢字氏名とふりがなをまとめて生成
+// 漢字氏名とふりがな等をまとめて生成
 $nanashi = new Nanashi();
 $gonbei = $nanashi->born();
 
