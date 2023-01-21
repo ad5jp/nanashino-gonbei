@@ -82,7 +82,7 @@ class Nanashi
         $last_name_key = array_rand($this->nomineesLastName);
 
         if ($this->unique) {
-            $nominee = $this->nomineesFirstName[$last_name_key][0] . $this->nomineesLastName[$first_name_key][0];
+            $nominee = $this->nomineesLastName[$last_name_key][0] . $this->nomineesFirstName[$first_name_key][0];
             if (in_array($nominee, $this->known) && $retry > 0) {
                 return $this->born($retry - 1);
             }
