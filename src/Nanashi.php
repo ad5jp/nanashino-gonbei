@@ -25,9 +25,24 @@ class Nanashi
      */
     private array $known = [];
 
+    /**
+     * @var array<int, array{0:string, 1:string, 2:\AD5jp\NanashinoGonbei\Enums\Sex::*, 3:\AD5jp\NanashinoGonbei\Enums\Generation::*}>
+     */
     private array $dictionaryFirstName = [];
+
+    /**
+     * @var array<int, array{0:string, 1:string}>
+     */
     private array $dictionaryLastName = [];
+
+    /**
+     * @var array<int, array{0:string, 1:string, 2:\AD5jp\NanashinoGonbei\Enums\Sex::*, 3:\AD5jp\NanashinoGonbei\Enums\Generation::*}>
+     */
     private array $nomineesFirstName = [];
+
+    /**
+     * @var array<int, array{0:string, 1:string}>
+     */
     private array $nomineesLastName = [];
 
     public function __construct()
@@ -114,7 +129,11 @@ class Nanashi
         return $this->born()->lastNameKana();
     }
 
-    private function filterFirstName(array $first_name_array)
+    /**
+     * @param array{0:string, 1:string, 2:\AD5jp\NanashinoGonbei\Enums\Sex::*, 3:\AD5jp\NanashinoGonbei\Enums\Generation::*} $first_name_array
+     * @return boolean
+     */
+    private function filterFirstName(array $first_name_array) : bool
     {
         if ($this->sex !== null && $this->sex !== $first_name_array[Dictionary::INDEX_SEX]) {
             return false;

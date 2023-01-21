@@ -10,9 +10,27 @@ class Gonbei
     private string $firstNameKana;
     private string $lastName;
     private string $lastNameKana;
+
+    /**
+     * @var \AD5jp\NanashinoGonbei\Enums\Sex::*
+     */
     private int $sex;
+
+    /**
+     * @var \AD5jp\NanashinoGonbei\Enums\Generation::*
+     */
     private int $generation;
 
+    /**
+     * Undocumented function
+     *
+     * @param string $firstName
+     * @param string $firstNameKana
+     * @param string $lastName
+     * @param string $lastNameKana
+     * @param \AD5jp\NanashinoGonbei\Enums\Sex::* $sex
+     * @param \AD5jp\NanashinoGonbei\Enums\Generation::* $generation
+     */
     public function __construct(
         string $firstName,
         string $firstNameKana,
